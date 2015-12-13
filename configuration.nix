@@ -63,7 +63,7 @@
     git
     vagrant
     spotify
-    vlc
+    #vlc
     chromium
     tlp
     nettools
@@ -90,7 +90,8 @@
     services.xserver.displayManager.sddm.enable = true;
     services.xserver.windowManager.i3.enable = true;
     services.xserver.windowManager.default = "i3";
-    services.xserver.windowManager.i3.config = "$HOME/.config/i3";
+    services.tlp.enable = true;
+    nixpkgs.options.services.xserver.windowManager.i3.config = "$HOME/.config/i3";
 
     programs.zsh.enable = true;
 
@@ -100,8 +101,8 @@
 	    	    speed = 255;
  		    sensitivity = 255;
  		    emulateWheel = true;
-	    }
-    }
+	    };
+    };
                     
                 
     # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -126,9 +127,9 @@
   enableFontDir = true;
   enableCoreFonts = true;
   enableGhostscriptFonts = true;
-  extraFonts = with pkgs ; [
-  liberation_ttf
-  ttf_bitstream_vera
+  fonts = with pkgs ; [
+      liberation_ttf
+      ttf_bitstream_vera
       dejavu_fonts
       terminus_font
       bakoma_ttf
@@ -139,8 +140,4 @@
     ];
   };
 
-
-  "/home/alg/.config/i3.config".source = "./config/i3.config"
-  
-  
   }
