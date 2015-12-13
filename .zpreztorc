@@ -158,5 +158,5 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 # Integrate with iTerm2.
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
-for i in $(cat ~/dotfiles/config/path.env ); do export $i; done
+for i in $(cat ~/.config/path.env ); do export $i; done
 export PATH=$PATH:$GOBIN
