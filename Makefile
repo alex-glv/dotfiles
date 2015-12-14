@@ -16,3 +16,7 @@ dotfiles:
 	for file in $(shell ls -a $(CURDIR)/.config | grep -v -P "\.$$|\.\."); do \
 		ln -sfn $(CURDIR)/.config/$$file $(HOME)/.config/$$file; \
 	done
+	# .emacs.d
+	for file in $(shell ls -a $(CURDIR)/.emacs.d| grep -v -P "\.$$|\.\."); do \
+		ln -sfn $(CURDIR)/.emacs.d/$$file $(HOME)/.emacs.d/$$file; \
+	done
