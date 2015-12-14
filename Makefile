@@ -11,4 +11,9 @@ dotfiles:
 		f=$$(basename $$file); \
 		ln -sfn $$file $(HOME)/$$f; \
 	done
-	git clone --recursive https://github.com/sorin-ionescu/prezto.git "$${ZDOTDIR:-$$HOME}/.zprezto"
+	rm -rf $$HOME/.zprezto && git clone --recursive https://github.com/sorin-ionescu/prezto.git "$$HOME/.zprezto"
+	ln -fs $$HOME/.zprezto/runcoms/zshrc $$HOME/.zshrc
+	ln -fs $$HOME/.zprezto/runcoms/zshenv $$HOME/.zshenv
+	ln -fs $$HOME/.zprezto/runcoms/zprofile $$HOME/.zprofile
+	ln -fs $$HOME/.zprezto/runcoms/zlogin $$HOME/.zlogin
+	ln -fs $$HOME/.zprezto/runcoms/zlogout $$HOME/.zlogout
