@@ -10,8 +10,8 @@
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
 #exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
-exec --no-startup-id feh /run/current-system/sw/share/backgrounds/gnome/Blinds.jpg
-exec --no-startup-id xss-lock -- i3lock -n -i /run/current-system/sw/share/backgrounds/gnome/adwaita-lock.jpg
+exec --no-startup-id feh --bg-fill /run/current-system/sw/share/backgrounds/gnome/Blinds.jpg
+exec --no-startup-id xss-lock -- i3lock -n
 
 set $mod Mod4
 
