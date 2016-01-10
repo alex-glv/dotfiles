@@ -160,3 +160,4 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 
 for i in $(cat ~/.path.env ); do export $i; done
 export PATH=$PATH:$GOBIN
+export NIX_PATH=forkpkgs=/home/alg/Sites/nixpkgs:$NIX_PATH
