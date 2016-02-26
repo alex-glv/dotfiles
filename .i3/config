@@ -9,10 +9,11 @@
 #
 # Please see http://i3wm.org/docs/userguide.html for a complete reference!
 
-#exec --no-startup-id /usr/lib/gnome-settings-daemon/gnome-settings-daemon
+exec --no-startup-id /nix/store/6dv5iwljn5g3rgp3kw9f0zbpd56yjrms-gnome-settings-daemon-3.16.1/libexec/gnome-settings-daemon
 exec --no-startup-id feh --bg-fill /home/alg/Pictures/broccoli.jpg
-exec --no-startup-id xss-lock -- i3lock -n
+exec --no-startup-id xss-lock -- i3lock -i /home/alg/Documents/nl.png
 
+exec --no-startup-id udiskie
 set $mod Mod4
 
 # Font for window titles. Will also be used by the bar unless a different font
@@ -45,6 +46,8 @@ bindsym $mod+e exec dmenu_run
 # shipping a .desktop file. It is a wrapper around dmenu, so you need that
 # installed.
 # bindsym $mod+d exec --no-startup-id i3-dmenu-desktop
+
+hide_edge_borders both
 
 # change focus
 bindsym $mod+h focus left
