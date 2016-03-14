@@ -159,5 +159,8 @@ zstyle ':prezto:module:tmux:auto-start' remote 'yes'
 # zstyle ':prezto:module:tmux:iterm' integrate 'yes'
 
 for i in $(cat ~/.path.env ); do export $i; done
-export PATH=$PATH:$GOBIN
+#for i in $(go env); do export $i; done
+
+#export PATH=$PATH:$GOBIN
+#export GOPATH=/home/alg/.go:/nix/store/jvlfyk5r4hrxxpzffxcp3jhi7fxf052v-go-1.5.3/share/go
 export NIX_PATH=forkpkgs=/home/alg/Sites/nixpkgs:$NIX_PATH

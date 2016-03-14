@@ -37,7 +37,7 @@ Xft.hintstyle:  hintslight
 URxvt*saveLines:	5000
 URxvt*geometry:		80x20
 
-URxvt*font:            xft:inconsolata:pixelsize=14.5
+URxvt*font:            xft:inconsolata:pixelsize=18
 URxvt*urlLauncher:         chromium
 URxvt*scrollBar:        false
 URxvt*scrollBar_right:       false 
